@@ -1,0 +1,38 @@
+/* Light (landing) tokens, scoped so the dark app is untouched. Mirrored in DESIGN.md. */
+.landing {
+  --l-bg: #f7f5f3;
+  --l-surface: #ffffff;
+  --l-text: #37322f;
+  --l-muted: #605a57;
+  --l-line: rgba(55, 50, 47, 0.12);
+  --l-accent: #f2b544;
+  background: var(--l-bg);
+  color: var(--l-text);
+}
+.landing :focus-visible {
+  outline-color: var(--l-text);
+}
+/* Logo's "IA" uses the dark-theme muted tone; lift it to the light one here. */
+.landing .text-muted {
+  color: var(--l-muted);
+}
+.landing details > summary {
+  list-style: none;
+}
+.landing details > summary::-webkit-details-marker {
+  display: none;
+}
+.landing .serif {
+  font-family: var(--font-landing-serif), ui-serif, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+/* iOS Safari tints the status bar from the page background, not theme-color: go light while the landing is mounted. */
+html:has(.landing),
+html:has(.landing) body {
+  background: #f7f5f3;
+}
+/* Anchor jumps land each section's top hairline exactly under the sticky header's (pt-safe + h-14 + 1px border), so no second line shows below it. */
+.landing section[id] {
+  scroll-margin-top: calc(max(env(safe-area-inset-top), 12px) + 57px);
+}

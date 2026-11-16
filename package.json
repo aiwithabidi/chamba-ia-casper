@@ -1,0 +1,49 @@
+{
+  "name": "chamba-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test tests/",
+    "format": "biome format --write .",
+    "check": "bun scripts/check.ts",
+    "smoke": "bun scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.105",
+    "@convex-dev/auth": "^2.0.0",
+    "ai": "^7.0.173",
+    "convex": "^1.50.0",
+    "driver.js": "^1.14.0",
+    "lucide-react": "1.73.0",
+    "motion": "^14.14.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.7",
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
+  },
+  "packageManager": "bun@1.4.4",
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}

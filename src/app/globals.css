@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #14120f;
+  --color-surface: #1c1a16;
+  --color-surface-2: #26231e;
+  --color-line: #38332c;
+  --color-text: #f3eee6;
+  --color-muted: #a39b8e;
+  --color-primary: #f2b544;
+  --color-on-primary: #14120f;
+  --color-like: #5cc98a;
+  --color-pass: #e57a66;
+  --font-sans: var(--font-geist-sans);
+  --radius-card: 24px;
+  --radius-tile: 20px;
+  --radius-field: 14px;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* One visible focus ring for every keyboard-reachable control. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* One flat accent: marigold with dark text. No gradients. */
+.bg-accent {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.text-accent {
+  color: var(--color-primary);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 12px);
+}
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 12px);
+}
+/* The scrolling part of an app screen. Its header must sit outside the scroller: iOS 26+ draws a
+   scroll-edge blur over the top of every scroll view, and a sticky header inside the old scrolling
+   <main> was blurred with it (title and wallet amount). */
+.scroll-body {
+  flex: 1 1 0%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  padding-bottom: 1rem;
+}
+/* A full-screen app view, fixed so the page never rubber-bands. The status-bar blur fix itself
+   is statusBarStyle "default" in app/layout.tsx. */
+.screen {
+  position: fixed;
+  inset: 0;
+  margin-inline: auto;
+  max-width: 430px;
+  height: 100dvh;
+  background: var(--color-bg);
+}
+
+/* Icon micro-motion (wallet pill). */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-12deg) scale(1.15);
+  }
+  75% {
+    transform: rotate(12deg) scale(1.15);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.anim-wiggle {
+  animation: wiggle 0.6s ease-in-out;
+  display: inline-block;
+}
+.anim-pop {
+  animation: pop 0.5s ease-out;
+  display: inline-block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim-wiggle,
+  .anim-pop {
+    animation: none;
+  }
+}

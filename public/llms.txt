@@ -1,0 +1,21 @@
+# Chamba IA
+
+> Chamba IA is a free, Spanish-language phone app (PWA) that gathers AI-training jobs (voice recording, transcription, AI response evaluation and expert review) for Spanish speakers in Latin America. It ranks each job by how well it fits the worker, pre-screens them with a short quiz and an AI interview, and links them to apply on the hiring platform.
+
+- Workers never pay Chamba and Chamba never pays workers; the platform or company that hires them pays them directly.
+- Chamba is not the employer. Each platform decides who it accepts and what it pays.
+- The app UI is Spanish only. No English is required.
+
+## App
+
+- [Home (Spanish)](https://chamba-ia-weld.vercel.app/): what Chamba is, who it is for, and the FAQ
+- [Install as an app](https://chamba-ia-weld.vercel.app/instalar): add it to the iPhone or Android home screen
+- [Sign up or sign in](https://chamba-ia-weld.vercel.app/entrar)
+
+## FAQ (summary)
+
+- Cost: free. Creating an account and taking pre-screens costs nothing, and Chamba never asks for money.
+- English: not needed. The app is in Spanish and shows projects looking for Spanish speakers.
+- Payment: the hiring platform pays the worker directly. Chamba never asks for bank details.
+- Experience: not required. The pre-screen shows your level; each platform sets its own requirements.
+- Employment: Chamba does not hire you. It pre-screens you and connects you with AI-training platforms.

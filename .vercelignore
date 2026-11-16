@@ -1,0 +1,8 @@
+.planning
+.claude
+.agents
+.env*
+.next
+node_modules
+docs
+*.tsbuildinfo
